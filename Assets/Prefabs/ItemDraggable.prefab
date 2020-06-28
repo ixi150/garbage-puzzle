@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4019827323028987326}
   - component: {fileID: -1783493439803849915}
   - component: {fileID: 4019827323028987324}
-  - component: {fileID: 4019827323028987325}
+  - component: {fileID: 5374470956708251180}
   - component: {fileID: 5166657075760894938}
   m_Layer: 8
   m_Name: ItemDraggable
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trail: {fileID: 5166657075760894938}
-  dragCollider: {fileID: 4019827323028987325}
+  dragCollider: {fileID: 5374470956708251180}
   draggedSize: 1.2
 --- !u!114 &-1783493439803849915
 MonoBehaviour:
@@ -117,8 +117,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4019827323028987325
-CircleCollider2D:
+--- !u!61 &5374470956708251180
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,8 +131,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.72727275, y: 0.72727275}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.38
+  m_Size: {x: 0.9, y: 0.9}
+  m_EdgeRadius: 0
 --- !u!96 &5166657075760894938
 TrailRenderer:
   serializedVersion: 2
