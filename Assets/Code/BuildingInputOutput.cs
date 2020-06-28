@@ -37,7 +37,7 @@ public class BuildingInputOutput : MonoBehaviour
             if (hit && building.CanLoadResource(itemType))
             {
                 var item = hit.collider.GetComponent<Item>();
-                if (item && item.ItemType == itemType)
+                if (item && item.ItemType == itemType && item.IsCloseToDesiredPosition && !item.IsDragged)
                 {
                     item.Position = transform.position.Snap();
                     item.SetActive(false);

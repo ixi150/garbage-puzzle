@@ -7,11 +7,12 @@ public class Draggable : MonoBehaviour
     [SerializeField] TrailRenderer trail;
     [SerializeField] Collider2D dragCollider;
     [SerializeField] float draggedSize = 1.2f;
-
+    
     Item item;
     bool isDragged;
     new Camera camera;
 
+    public static bool IsDragEnabled { get; set; } = true;
     public static bool IsAnythingDragged { get; private set; }
     public bool IsDragged
     {
@@ -68,22 +69,17 @@ public class Draggable : MonoBehaviour
             return;
         }
 
+        if (!IsDragEnabled)
+        {
+            IsDragged = false;
+            return;
+        }
 
         var newPos = camera.ScreenToWorldPoint(Input.mousePosition).Snap();
         var delta = newPos - Position;
         if (delta.sqrMagnitude > 0f)
         {
-            if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
-            {
-                delta.x /= Mathf.Abs(delta.x);
-                delta.y = 0;
-            }
-            else
-            {
-                delta.x = 0;
-                delta.y /= Mathf.Abs(delta.y);
-            }
-
+            delta = delta.Normalize();
             if (WorldManager.CanMoveItem(Position, delta, dragCollider))
             {
                 newPos = Position + delta;
@@ -91,7 +87,6 @@ public class Draggable : MonoBehaviour
                 transform.position = (Vector2)newPos;
             }
         }
-
 
         if (!Input.GetMouseButton(0))
         {
@@ -101,7 +96,7 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!enabled)
+        if (!enabled || !IsDragEnabled)
         {
             return;
         }

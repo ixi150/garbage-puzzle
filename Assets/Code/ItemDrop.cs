@@ -72,7 +72,9 @@ public class ItemDrop : MonoBehaviour
                 var item = hit.collider.GetComponent<Item>();
                 if (item 
                     && item.ItemType == itemType
-                    && MoneyManager.Instance.Money >= -itemType.Price)
+                    && MoneyManager.Instance.Money >= -itemType.Price
+                    && item.IsCloseToDesiredPosition
+                    && !item.IsDragged)
                 {
                     item.Position = transform.position.Snap();
                     item.SetActive(false);

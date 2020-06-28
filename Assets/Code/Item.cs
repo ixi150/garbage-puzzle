@@ -8,9 +8,16 @@ public class Item : MonoBehaviour, IMapElement
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] TrailRenderer trailRenderer;
     [SerializeField] float moveSpeed = 1;
+    [SerializeField] float closeDistance = 0.1f;
 
     Vector2Int position;
     Vector3 desiredPosition;
+    Draggable draggable;
+
+    public bool IsAtDesiredPosition => desiredPosition == transform.position;
+    public bool IsCloseToDesiredPosition => (desiredPosition - transform.position).sqrMagnitude < closeDistance * closeDistance;
+
+    public bool IsDragged => draggable?.IsDragged ?? false;
 
     public Vector2Int Position
     {
@@ -59,6 +66,11 @@ public class Item : MonoBehaviour, IMapElement
         {
             col.enabled = active;
         }
+    }
+
+    void Awake()
+    {
+        TryGetComponent(out draggable);
     }
 
     void OnEnable()

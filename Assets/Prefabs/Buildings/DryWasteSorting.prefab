@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1443882057
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024263df6696e224b8fa25bd19373059, type: 3}
   m_Color: {r: 0.32941177, g: 0.3137255, b: 0.24313727, a: 1}
@@ -177,7 +177,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1443882057
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024263df6696e224b8fa25bd19373059, type: 3}
   m_Color: {r: 0.32941177, g: 0.3137255, b: 0.24313727, a: 1}
@@ -285,7 +285,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1443882057
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024263df6696e224b8fa25bd19373059, type: 3}
   m_Color: {r: 0.32941177, g: 0.3137255, b: 0.24313727, a: 1}
@@ -393,7 +393,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1443882057
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024263df6696e224b8fa25bd19373059, type: 3}
   m_Color: {r: 0.32941177, g: 0.3137255, b: 0.24313727, a: 1}
@@ -501,7 +501,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1443882057
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024263df6696e224b8fa25bd19373059, type: 3}
   m_Color: {r: 0.32941177, g: 0.3137255, b: 0.24313727, a: 1}
@@ -609,7 +609,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1443882057
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024263df6696e224b8fa25bd19373059, type: 3}
   m_Color: {r: 0.32941177, g: 0.3137255, b: 0.24313727, a: 1}
@@ -717,7 +717,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1443882057
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 024263df6696e224b8fa25bd19373059, type: 3}
   m_Color: {r: 0.32941177, g: 0.3137255, b: 0.24313727, a: 1}
@@ -989,6 +989,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7635298687741507954, guid: c9236a5b834811744813781bbc9c0651,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9236a5b834811744813781bbc9c0651, type: 3}
 --- !u!4 &1919144836168755884 stripped
@@ -1008,11 +1013,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipX
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3439184654107495344, guid: c9236a5b834811744813781bbc9c0651,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: -0.8916469
       objectReference: {fileID: 0}
     - target: {fileID: 3918788382943604475, guid: c9236a5b834811744813781bbc9c0651,
         type: 3}
@@ -1105,6 +1105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.24141155
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635298687741507954, guid: c9236a5b834811744813781bbc9c0651,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9236a5b834811744813781bbc9c0651, type: 3}
@@ -1208,6 +1213,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7635298687741507954, guid: c9236a5b834811744813781bbc9c0651,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9236a5b834811744813781bbc9c0651, type: 3}
 --- !u!4 &8938187286308623301 stripped
@@ -1309,6 +1319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.25712842
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635298687741507954, guid: c9236a5b834811744813781bbc9c0651,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9236a5b834811744813781bbc9c0651, type: 3}

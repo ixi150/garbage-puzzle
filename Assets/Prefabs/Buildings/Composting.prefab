@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969bf572e45f4784091d99ea95db4ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 20
+  duration: 15
   input:
   - {fileID: 11400000, guid: 54341cbca1dbffe4b97ed5a23a1a449b, type: 2}
   output:
@@ -547,6 +547,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7635298687741507954, guid: c9236a5b834811744813781bbc9c0651,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9236a5b834811744813781bbc9c0651, type: 3}
 --- !u!4 &4894503080334441806 stripped
@@ -566,11 +571,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipX
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3439184654107495344, guid: c9236a5b834811744813781bbc9c0651,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: -0.8916469
       objectReference: {fileID: 0}
     - target: {fileID: 3918788382943604475, guid: c9236a5b834811744813781bbc9c0651,
         type: 3}
@@ -663,6 +663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.25741404
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635298687741507954, guid: c9236a5b834811744813781bbc9c0651,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9236a5b834811744813781bbc9c0651, type: 3}

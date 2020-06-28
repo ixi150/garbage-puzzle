@@ -19,10 +19,14 @@ public class TileSelection : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (sr.enabled = Draggable.IsAnythingDragged)
-        {
-            var pos = camera.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = (Vector2)pos.Snap();
-        }
+        //if (sr.enabled = Draggable.IsAnythingDragged)
+        //{
+        //    var pos = camera.ScreenToWorldPoint(Input.mousePosition);
+        //    transform.position = (Vector2)pos.Snap();
+        //}
+
+        var pos = camera.ScreenToWorldPoint(Input.mousePosition).Snap();
+        transform.position = (Vector2)pos;
+        sr.enabled = WorldManager.IsThereTile(pos);
     }
 }

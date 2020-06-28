@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4019827323028987315}
+  - component: {fileID: 4019827323028987326}
   - component: {fileID: -1783493439803849915}
   - component: {fileID: 4019827323028987324}
   - component: {fileID: 4019827323028987325}
   - component: {fileID: 5166657075760894938}
   m_Layer: 8
-  m_Name: Item
+  m_Name: ItemDraggable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,6 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4019827323028987326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019827323028987327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac83bede1df6db44913123e70a3dd2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trail: {fileID: 5166657075760894938}
+  dragCollider: {fileID: 4019827323028987325}
+  draggedSize: 1.2
 --- !u!114 &-1783493439803849915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,6 +66,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4019827323028987324}
   trailRenderer: {fileID: 5166657075760894938}
   moveSpeed: 1
+  closeDistance: 0.1
 --- !u!212 &4019827323028987324
 SpriteRenderer:
   m_ObjectHideFlags: 0
