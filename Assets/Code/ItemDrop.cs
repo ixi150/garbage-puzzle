@@ -53,15 +53,15 @@ public class ItemDrop : MonoBehaviour
         if (isSpawner)
         {
             var pos = transform.position.Snap();
-            if (itemType 
-                && WorldManager.CanMoveItem(pos, Vector2Int.right) 
+            if (itemType
+                && WorldManager.CanMoveItem(pos, Vector2Int.right)
                 && MoneyManager.Instance.Money >= itemType.Price + buyPriceIncrease)
             {
                 var item = ItemFactory.Instance.SpawnItem(pos + Vector2Int.right, itemType);
                 item.transform.position = transform.position;
                 item.SetActive(false);
                 item.SetActive(true, .5f);
-                MoneyManager.Instance.Money -= itemType.Price + buyPriceIncrease;
+                MoneyManager.Instance.ModifyMoney(-(itemType.Price + buyPriceIncrease), transform.position);
             }
         }
         else
@@ -70,7 +70,7 @@ public class ItemDrop : MonoBehaviour
             if (hit)
             {
                 var item = hit.collider.GetComponent<Item>();
-                if (item 
+                if (item
                     && item.ItemType == itemType
                     && MoneyManager.Instance.Money >= -itemType.Price
                     && item.IsCloseToDesiredPosition
@@ -79,7 +79,7 @@ public class ItemDrop : MonoBehaviour
                     item.Position = transform.position.Snap();
                     item.SetActive(false);
                     Destroy(item.gameObject, 1);
-                    MoneyManager.Instance.Money += itemType.Price;
+                    MoneyManager.Instance.ModifyMoney(itemType.Price, transform.position);
                 }
             }
         }

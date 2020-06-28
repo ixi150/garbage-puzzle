@@ -2493,6 +2493,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: MixedWasteSorting (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4987337421413492979, guid: a7361da921c8a844c91074363d4d0a6e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987337421413492979, guid: a7361da921c8a844c91074363d4d0a6e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987337421413492979, guid: a7361da921c8a844c91074363d4d0a6e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.20754719
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7361da921c8a844c91074363d4d0a6e, type: 3}
 --- !u!1 &1296736235
@@ -2527,6 +2542,7 @@ RectTransform:
   m_Children:
   - {fileID: 1748804825}
   - {fileID: 1425423208}
+  - {fileID: 1301242728}
   m_Father: {fileID: 438343373}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2595,6 +2611,60 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1301242727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301242728}
+  - component: {fileID: 1301242729}
+  m_Layer: 0
+  m_Name: MoneyInfoPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1301242728
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301242727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1296736236}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1301242729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301242727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59da035ec21ceac4ba50f3eb29116c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textPrefab: {fileID: 4150997382953372617, guid: 266dfd4fcf14bf74c9bff083cba7d19f,
+    type: 3}
+  positiveColor: {r: 0, g: 1, b: 0, a: 1}
+  negativeColor: {r: 1, g: 0, b: 0, a: 1}
+  duration: 1
+  offset: {x: 0, y: 100, z: 0}
 --- !u!1 &1326237250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,6 +3135,7 @@ MonoBehaviour:
   money: 0
   maxMoney: 2147483647
   moneyAmountText: {fileID: 1951185232}
+  moneyInfo: {fileID: 1301242729}
 --- !u!1 &1722297824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,17 +3930,17 @@ PrefabInstance:
     - target: {fileID: 3536826641356615027, guid: dbe249bd621adc1458e93169f38d4652,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.20754719
       objectReference: {fileID: 0}
     - target: {fileID: 3536826641356615027, guid: dbe249bd621adc1458e93169f38d4652,
         type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.20754719
       objectReference: {fileID: 0}
     - target: {fileID: 3536826641356615027, guid: dbe249bd621adc1458e93169f38d4652,
         type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.20754719
       objectReference: {fileID: 0}
     - target: {fileID: 3536826641356615027, guid: dbe249bd621adc1458e93169f38d4652,
         type: 3}
@@ -4207,6 +4278,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987337421413492979, guid: a7361da921c8a844c91074363d4d0a6e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987337421413492979, guid: a7361da921c8a844c91074363d4d0a6e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.20754719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987337421413492979, guid: a7361da921c8a844c91074363d4d0a6e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.20754719
       objectReference: {fileID: 0}
     - target: {fileID: 5083640509967512652, guid: a7361da921c8a844c91074363d4d0a6e,
         type: 3}
